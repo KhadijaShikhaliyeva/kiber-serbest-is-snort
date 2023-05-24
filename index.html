@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNORT-Serbest-is</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    
+
+  <div>
+    
+    <p class="serbestish"> Fərdi Sərbəst İş - Snort aləti </p>
+    <p class="aboutme">
+         Tələbə: <em> Şıxəliyeva Xədicə </em>   <br>
+         Müəllim:<em> Abasova Əzimə</em><br>
+         Fakültə:<em> İnformasiya və Telekommunikasiya Texnologiyaları</em> <br>
+         Kafedra:<em> Kibertəhlükəsizlik</em><br>
+         İxtisas:<em> İnformasiya Təhlükəsizliyi</em> <br>
+         Kurs:<em> I</em> <br>
+         Qrup:<em> 642a3</em><br>
+         Fənn:<em> Kibertəhlükəsizliyinin əsasları</em> <br><br>
+
+    </p>
+
+    <h1 > Snort Nədir? </h1>
+    <img src="hacker-tool-snort-v1.png">
+    <p class="aboutsnort">
+        
+        
+        Snort, Kali Linux-a daxil olan şəbəkə təhlükəsizliyi vasitəsidir. Şəbəkə trafikinə nəzarət edən və paketləri dərhal təhlil edən <br>
+        IDS və ya IPS kimi istifadə edilə bilər. Snort açıq mənbə alətidir və təkmilləşmiş imza əsaslı müdaxilə & aşkarlama sistemi təklif edir. <br>
+        O, müəyyən edilmiş hücum nümunələrini aşkar edir. Snort port skanları, 
+        DDOS hücumları,<br> zərərli proqram fəaliyyətləri və digər şəbəkə əsaslı 
+        hücumlar kimi müxtəlif hücum növlərini aşkar edə bilər.
+    </p>
+
+    <p class="idsips">
+        <span style="color:pink">IDS</span>  VƏ <span style="color:pink">IPS</span> NƏDİR?
+    </p>
+
+
+<p class="aboutids">
+    IDS <span style="color: pink;"><b> (Intrusion Detection System)</b></span>, şəbəkədəki potensial təhlükəli girişləri (hücumları) aşkar etmək üçün istifadə olunan bir sistemdir.<br>
+    IDS, şəbəkə trafiyini izləyir və müəyyən hücum imzalarını və ya hücum nümunələrini tanıyaraq onları aşkar edir. <br>
+    IDS, hücumları təhlil edib xəbərdarlıq verən məqsədlə istifadə olunur, amma hücumları avtomatik olaraq dayandırmaq qabiliyyətinə malik deyildir.
+</p>
+<p class="aboutips">
+    IPS <span style="color: pink;"><b></b>(Intrusion Prevention System)</b></span>, şəbəkədəki hücumları aşkar etmək və onları aktiv olaraq dayandırmaq üçün istifadə olunan bir sistemdir. <br>
+    IPS, IDS ilə bənzərlik göstərərək ağ trafiyini izləyir və hücum imzalarını yoxlayır. 
+    Lakin IPS, hücumları aşkar etdikdən sonra onları avtomatik olaraq dayandırmaq üçün müxtəlif tədbirlər görə bilir. 
+    Bunlar paketləri filtrləmək, istifadəçilərin qadağan edilməsini təmin etmək və ya bağlantıları dayandırmaq kimi tədbirlər ola bilər. 
+    IPS, potensial hücumları aktif şəkildə müdafiə etmək üçün istifadə edilir.
+</p>
+
+<p class="architecture">
+    Snortun Arxitekturası
+</p>
+<img id="arxitektura" src="Arxitektura.png">
+
+<p>
+    <span style="color: pink;"> SNORT </span> 3 rejimdə işləyəcək şəkildə konfiqurasiya edilə bilər: <br>
+     Snifer modu <br>
+     Paket qeydi modu <br>
+     Şəbəkə intruzion aşkarlama sistemi rejimi <br>
+</p>
+
+<p class="emeliyyat">
+    <b>Əməliyyatın addımları</b>
+</p>
+<img id="no1" class="numberpictures" src="1.png">
+<p>
+    Quraşdırma fayllarının yoxlanması hökmlüdür
+</p>
+<p>
+    Linux konfiqurasiya fayllarında snort /etc/snort/snort.conf-da saxlanılır.
+</p>
+<p>
+    Snort qaydaları proqramlaşdırma dilinə oxşar olan Snort Rules Language (SRL) adlı dildə yazılır.
+</p>
+<p>
+    Bu qaydalar Snortun xəbərdarlıq etməsi 
+    üçün yerinə yetirilməli olan şərtləri müəyyən edir. <br>
+    Qaydaları təşkilatın və ya şəbəkənin konkret tələbatlarına uyğun olaraq özəlləşdirmək olar.
+</p>
+    <img id="no2" class="numberpictures" src="2.png"> <br>
+    <img id="no1" class="numberpictures" src="3.png"> <br>
+
+<p>
+    <b style="font-size: 45px;"> Əməliyyat Modu 1: Sniffer Modu </b>
+</p>
+
+<p>
+    Sniffer rejimində özünü şəbəkə snifferi kimi aparır və şəbəkə interfeysindən keçən paketləri tutur.
+</p>
+<p>
+    Alət, ələ keçirilmiş paketləri konsolda və ya log faylında göstərir və istifadəçiyə şəbəkə trafikini təhlil etməyə imkan verir.
+</p>
+
+<p>
+    Bu rejim şəbəkə problemləri aradan qaldırılması və monitorinqi üçün faydalı ola bilər, <br>
+    lakin hər hansı bir intruzion aşkar və ya qarşısını almaq imkanları təmin etmir.
+</p>
+<p>
+   <b> <span style="color: pink;"> sudo snort –v </span> : TCP/IP paketlərinin başlığını ekranda çap edir</b> 
+</p>
+<img id="4" class="numberpictures" src="4.png"> <br>
+<img id="5" class="numberpictures" src="5.png">
+
+<p>
+    <b> <span style="color: pink;">  sudo snort  –vd </span> : ötürülən proqram məlumatları ilə TCP/IP ICMP başlığını göstərir</b>
+</p>
+<img id="6" class="numberpictures" src="6.png"> <br>
+<img id="7" class="numberpictures" src="7.png">
+
+<p>
+    <b> <span style="color: pink;">  sudo snort -X </span> : Tam paket təfərrüatlarını HEX-də göstərir.</b>
+</p>
+<img id="8" class="numberpictures" src="8.png"> <br>
+
+<p>
+    <b style="font-size: 45px;"> Əməliyyat Modu 2: Paket Loqer Modu
+    </b>
+</p>
+
+<p>Packet Logger rejimində alət daha sonrakı analiz üçün fayla əsir etdiyi hər paketi qeyd edir. <br>
+    Bu rejim hüquqi analiz üçün və ya offlayn analiz üçün paketlərin tutulması üçün faydalı ola bilər.</p>
+<p>
+    Lakin, Sniffer rejimi kimi, bu heç bir intruziya aşkar və ya qarşısını almaq qabiliyyətini təmin etmir.
+</p>
+<p>
+    <b> <span style="color: pink;">Parametr "-l" </b> – Logger mod, hədəf <b><span style="color: pink;">log və xəbərdarlıq</span></b> çıxış cərgəsini təmin edir. <br>
+    Ön qurğulu çıxış qovluğu <b><span style="color: pink;"> /var/log/snortdur </span></b>. Default hərəkət tcpdump formatı olaraq <b><span style="color: pink;">/var/log/snort</span></b> şəklində dump etməkdir.
+</p>
+
+<p>
+   <b> Paket Loqer Modunda SNORT Başladırıq. </b>
+</p>
+
+<p>
+    <b> <span style="color: pink;">  sudo snort -dev -l . </span> 
+
+</p>
+
+<p>
+    Komandanın "-1 ." hissəsi cari kataloqda qeydləri yaradır.
+</p>
+<p>
+<img id="9" class="numberpictures" src="9.png"> <br>
+-> Loq fayl tutulmuş trafikdən yaradılır.
+</p>
+<p>
+    <img id="10" class="numberpictures" src="10.png"> <br>
+  -> Növbəti addım əmrin köməyi ilə yaradılan log faylını oxumaqdır:
+</p>
+
+<p>
+    <b> <span style="color: pink;">  sudo snort -r _your_log_file_name_
+    </span> 
+</p>
+
+<p>
+<img id="11" class="numberpictures" src="11.png"> <br>
+O, ikili çıxışı kimi oxuya və həll edə bilir. 
+Lakin əgər biz "-K ASCII" parametri ilə və ya laymen dilində ASCII formatında logs yaratsaq, Snort onları oxumayacaqdır.
+</p>
+ <p>
+    Bu cür log fayllarını açmaq üçün tcpdump və ya wireshark lazımdır. <br> <br>
+</p>
+
+<p>
+    <b>Log faylı tcpdump ilə açılır.</b>
+</p>
+
+<p>
+    <b> <span style="color: pink;"> sudo tcpdump -r _log_file_name_
+    </span> 
+</p>
+
+<img id="12" class="numberpictures" src="12.png"> <br>
+
+<p>
+    <b style="font-size: 45px;"> Əməliyyat Modu 3: IDS/IPS
+    </b>
+</p>
+<p>
+    Network Intrusion Detection rejimində Snort şəbəkə trafikini real vaxt rejimində təhlil edir və onu bir qayda-qanuna qarşı müqayisə edir.
+</p>
+<p>
+    Qaydaya uyğun paketi aşkar etdikdə, xəbərdarlıq yaradır. 
+    Bu xəbərdarlıq konsola, log faylına, <br> yaxud e-poçt serveri və ya SIEM kimi xarici sistemə göndərilə bilər.
+</p>
+
+<p>
+    Bu mod real-time intrusion aşkar və qarşısının alınması imkanlarını təmin edir və Snort üçün əsas əməliyyat rejimidir.
+</p>
+
+<p>
+    <b> <span style="color: pink;">Parametr "-D" </span></b>– Bu parametr əsasən skriptlərdə arxa fonda Snort xidmətini başlamaq üçün istifadə olunur.
+</p>
+
+
+<p>
+    <b> <span style="color: pink;"> sudo snort -c /etc/snort/snort.conf -D
+    </span> 
+</p>
+
+<p>
+    -c : Konfiqurasiya faylını təyin etmək üçün istifadə olunur <br>
+    -D: Background Mode. 
+</p>
+
+<p>
+    Yuxarıda əmr arxa planda snort hadisəsini başlayacaq və trafiki tutacaq.<br>
+     Trafik əmələ gələndən sonra snort paketlərin işlənməsinə başlayacaq. Həmçinin müvafiq prosesi <b><span style="color: pink;">"ps" </span></b> ilə yoxlamaq olar.
+</p>
+
+<img id="13" class="numberpictures" src="13.png"> <br>
+
+<p>
+    <b style="font-size: 45px;"> IDS/IPS-də Xəbərdarlıq Modları
+    </b>
+</p>
+
+<p>
+   <b> <span style="color: pink;"> • console</span>  : sürətli şəkildə konsol ekranında xəbərdarlıqları göstərir. <br>
+   <b> <span style="color: pink;"> • cmg</span> : heca və mətn formatında əsas başlıq məlumatlarını və yükü təmin edir. <br>
+   <b> <span style="color: pink;"> • full</span> : xəbərdarlıq haqqında bütün mümkün məlumatları təqdim edir.<br>
+   <b> <span style="color: pink;"> • fast</span> : sadəcə alert mesajını, timestamp, mənbə və hədəf IP ünvanları, port nömrələri kimi zəruri məlumatları göstərir. <br>
+   <b> <span style="color: pink;"> • none</span> : xəbərdarlığı tamamilə qeyri-fəal edir.<br>
+</p>
+
+<p>
+    "-A" xəbərdarlıq modlarından istifadə etmək üçün "-A" parametri istifadə olunur. <br>
+    Məsələn, aşağıdakı əmrdə konsol xəbərdarlıq rejimindən istifadə etmək olar.
+</p>
+<p>
+    <b> <span style="color: pink;"> sudo snort -c /etc/snort/snort.conf -A console
+    </span> 
+</p>
+
+<img id="14" class="numberpictures" src="14.png"> <br>
+<img id="15" class="numberpictures" src="15.png"> <br>
+
+<p>
+    Snort alətindən istifadə edərək təlimat aşkarlanmasının bu nümayişi Windows əməliyyat sistemi vasitəsilə də edilə bilər.
+</p>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

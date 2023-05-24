@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(24, 23, 23);
+  color: aliceblue;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.01rem;
+}
+
+.aboutme {
+text-align: left;
+position: relative;
+left: 31%;
+}
+
+.serbestish {
+font-size: 45px;
+}
+
+img{
+width: 400px;
+}
+
+.idsips{
+font-size: 50px;
+}
+
+.architecture{
+    font-size: 50px;
+}
+
+#arxitektura{
+width: 700px;
+}
+
+.emeliyyat{
+font-size: 50px;
+}
+  
+.numberpictures {
+  width: 700px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
